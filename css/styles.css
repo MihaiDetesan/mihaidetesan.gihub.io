@@ -1,0 +1,154 @@
+/* Base style for links */
+.terminal-link {
+    color: #00ffff; /* Bright cyan for links */
+    text-decoration: none; /* No underline for a clean look */
+}
+
+/* Hover state for links */
+.terminal-link:hover {
+    color: #0088ff; /* Slightly darker blue to show hover effect */
+    text-decoration: underline; /* Underline to emphasize interactivity */
+}
+
+/* For strong text in terminal theme */
+strong {
+    color: #00ff00; /* Bright green */
+}
+
+        /* General terminal-like style */
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2, h3 {
+            color: #00ff00;
+        }
+
+        /* Section styling */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        /* Project list style */
+        .projects-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .projects-list li {
+            margin-bottom: 1rem;
+        }
+
+        .projects-list a {
+            color: #00ff00;
+        }
+
+        /* Contact form */
+        .contact-form {
+            max-width: 500px;
+            margin: 20px 0;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #00ff00;
+            border: 1px solid #555;
+            border-radius: 4px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00ff00;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #00ff00;
+            color: black;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .btn:hover {
+            background-color: #009900;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            color: gray;
+            text-align: center;
+        }
+/* Tooltip container - relative positioning for proper placement */
+.tooltip-container {
+    position: relative;
+    display: inline-block; /* Ensure it wraps around the strong text */
+    cursor: pointer; /* Makes it clear that it's interactive */
+}
+
+/* Hidden tooltip text */
+.tooltip-text {
+    visibility: hidden;
+    width: 200px; /* Set a width for better formatting */
+    background-color: #333; /* Dark background for the tooltip */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+
+    /* Positioning */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the trigger text */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Arrow styling */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.3s; /* Smooth fade-in */
+}
+
+/* Show tooltip on hover */
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Optional: Add an arrow pointing to the text */
+.tooltip-text::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent; /* Arrow color matches tooltip */
+}
